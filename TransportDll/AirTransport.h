@@ -4,5 +4,7 @@
 
 class AirTrpt :public Transport {
 protected:
-	AirTrpt(int speed, int ident);
+	int fdist, sdist, tdist, fodist, reduce;
+	AirTrpt(int speed, int ident/*, int fd, int sd, int td, int fod, int reduce*/);
+/*	int RaceTime(Transport* Trnsp, int dist) override;*/
 };

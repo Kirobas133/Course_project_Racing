@@ -1,6 +1,11 @@
 #include "GroundTransport.h"
 
-GroundTrpt::GroundTrpt(int speed, int ident) :Transport(speed, ident) {}
+GroundTrpt::GroundTrpt(int speed, int ident, double fp, double sp, double op, int tmp) :Transport(speed, ident) {
+	this->fp = fp;
+	this->sp = sp;
+	this->op = op;
+	this->tmp = tmp;
+}
 
 int GroundTrpt::RaceTime(Transport* Trnsp, int dist) {
 	int time;

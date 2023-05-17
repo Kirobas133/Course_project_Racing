@@ -2,8 +2,10 @@
 #include"AirTransport.h"
 
 class Broom :public AirTrpt {
+public:
 	Broom();
-	int RaceTime(Broom trnsp, int dist);
+protected:
+	int RaceTime(Transport* Trnsp, int dist) override;
 };
 
 

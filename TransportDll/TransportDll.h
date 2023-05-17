@@ -8,4 +8,6 @@ protected:
 	int speed;
 	int ident;
 	virtual int RaceTime(Transport* trsp, int dist);
+public:
+	Transport& Race();
 };

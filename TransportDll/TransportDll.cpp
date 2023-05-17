@@ -5,6 +5,8 @@ Transport::Transport(int speed, int ident) {
 	this->ident = ident;
 }
 
-int Transport::RaceTime(Transport* trsp, int dist){
-}
+int Transport::RaceTime(Transport* trsp, int dist){}
 
+Transport& Transport::Race() {
+
+}

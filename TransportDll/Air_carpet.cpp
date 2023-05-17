@@ -3,6 +3,21 @@
 Air_carpet::Air_carpet() :AirTrpt(10, 5) {
 	name = "Air carpet";
 }
-int Air_carpet::RaceTime(Air_carpet trnsp, int dist) {
 
+int Air_carpet::RaceTime(Transport* Trnsp, int dist) {
+	int time;
+	if (dist < 1000) {
+		time = dist / speed;
+		return time;
+	}
+	else if (dist < 5000) {
+		time = (dist - (dist * 3 / 100)) / speed;
+		return time;
+	}
+	else if (dist < 10000) {
+		time = (dist - (dist * 10 / 100)) / speed;
+	}
+	else {
+		time = (dist - (dist * 5 / 100)) / speed;
+	}
 }
