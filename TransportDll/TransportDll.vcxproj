@@ -140,6 +140,7 @@
     <ClInclude Include="Eagle.h" />
     <ClInclude Include="Fast_furious_Camel.h" />
     <ClInclude Include="GroundTransport.h" />
+    <ClInclude Include="Race.h" />
     <ClInclude Include="TransportDll.h" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +153,7 @@
     <ClCompile Include="Eagle.cpp" />
     <ClCompile Include="Fast_furious_Camel.cpp" />
     <ClCompile Include="GroundTransport.cpp" />
+    <ClCompile Include="Race.cpp" />
     <ClCompile Include="TransportDll.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
