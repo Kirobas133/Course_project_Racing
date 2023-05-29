@@ -2,6 +2,7 @@
 #include<string>
 
 class Transport {
+	friend class Race;
 protected:
 	Transport(int speed, int ident);
 	std::string name;

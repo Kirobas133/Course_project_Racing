@@ -4,8 +4,8 @@
 class Race {
 protected:
 	Transport* TranspMass;
-	int TranspCounts;
+	int TranspCounts, Dist;
 public:
-	Race(Transport* TranspMass, int TranspCounst);
+	Race(Transport* TranspMass, int TranspCounst, int Dist);
 	Transport* RaceResult(Race RaceList);
 };
