@@ -1,7 +1,7 @@
 #include <iostream>
 #include"Race.h"
 
-Race::Race(Transport** TranspMass, int TranspCounts, int Dist) {
+Race::Race(Transport** TranspMass, int TranspCounts, double Dist) {
 	this->TranspMass = TranspMass;
 	this->TranspCounts = TranspCounts;
 	this->Dist = Dist;

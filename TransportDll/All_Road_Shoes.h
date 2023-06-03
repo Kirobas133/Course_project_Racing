@@ -3,5 +3,5 @@
 
 class All_Road_Shoes :public GroundTrpt {
 public:
-	All_Road_Shoes();
+	TRANSPORT_API All_Road_Shoes();
 };

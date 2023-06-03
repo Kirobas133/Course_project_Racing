@@ -3,7 +3,7 @@
 
 class Eagle :public AirTrpt {
 public:
-	Eagle();
+	TRANSPORT_API Eagle();
 protected:
 	double RaceTime(Transport* Trnsp, double dist) override;
 };

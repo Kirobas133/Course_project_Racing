@@ -1,4 +1,11 @@
 ﻿#pragma once
+
+#ifdef TRANSPORTDLL_EXPORTS
+#define TRANSPORT_API __declspec(dllexport)
+#else
+#define TRANSPORT_API __declspec(dllimport)
+#endif
+
 #include<string>
 
 class Transport {

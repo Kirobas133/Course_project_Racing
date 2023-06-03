@@ -3,7 +3,7 @@
 
 class Broom :public AirTrpt {
 public:
-	Broom();
+	TRANSPORT_API Broom();
 protected:
 	double RaceTime(Transport* Trnsp, double dist) override;
 };

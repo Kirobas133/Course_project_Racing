@@ -3,5 +3,5 @@
 
 class Fast_furious_Camel :public GroundTrpt {
 public:
-	Fast_furious_Camel();
+	TRANSPORT_API Fast_furious_Camel();
 };

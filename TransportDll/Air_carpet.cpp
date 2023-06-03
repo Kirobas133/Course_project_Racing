@@ -1,7 +1,7 @@
 #include"Air_carpet.h"
 
 Air_carpet::Air_carpet() :AirTrpt(10, 5) {
-	name = "Air carpet";
+	name = "Ковер-самолет";
 }
 
 double Air_carpet::RaceTime(Transport* Trnsp, double dist) {
@@ -16,8 +16,10 @@ double Air_carpet::RaceTime(Transport* Trnsp, double dist) {
 	}
 	else if (dist < 10000) {
 		time = (dist - (dist * 10 / 100)) / speed;
+		return time;
 	}
 	else {
 		time = (dist - (dist * 5 / 100)) / speed;
+		return time;
 	}
 }

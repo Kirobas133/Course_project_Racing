@@ -3,5 +3,5 @@
 
 class Centaur :public GroundTrpt {
 public:
-	Centaur();
+	TRANSPORT_API Centaur();
 };

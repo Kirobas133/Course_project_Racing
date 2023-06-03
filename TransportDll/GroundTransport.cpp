@@ -1,34 +1,39 @@
 #include "GroundTransport.h"
 
-GroundTrpt::GroundTrpt(int speed, int ident, double fp, double sp, double op, int tmp) :Transport(speed, ident) {
-	this->fp = fp;
-	this->sp = sp;
-	this->op = op;
-	this->tmp = tmp;
+GroundTrpt::GroundTrpt(int speed, int ident, double firstpause, double secondpause, double otherpause, int timetopause) :Transport(speed, ident) {
+	this->firstpause = firstpause;
+	this->secondpause = secondpause;
+	this->otherpause = otherpause;
+	this->timetopause = timetopause;
 }
 
 double GroundTrpt::RaceTime(Transport* Trnsp, double dist) {
 	double time;
 
 	time = dist / (this->speed);
-	if (time <= tmp) {
+	if (time <= timetopause) {
 		return time;
 	}
 	else {
-		int temptime = time;
-		temptime = temptime - tmp;
-		time = time + fp;
-		if (temptime <= tmp) {
+		double temptime = time;
+		temptime = temptime - timetopause;
+		time = time + firstpause;
+		if (temptime <= timetopause) {
 			return time;
 		}
 		else {
-			temptime = temptime - tmp;
-			time = time + sp;
-			while (temptime > 0) {
-				temptime = temptime - tmp;
-				time = time + op;
+			temptime = temptime - timetopause;
+			time = time + secondpause;
+			if (temptime <= timetopause) {
+				return time;
 			}
-			return time;
+			else {
+				while (temptime > 0) {
+					temptime = temptime - timetopause;
+					time = time + otherpause;
+				}
+				return time;
+			}
 		}
 	}
 }

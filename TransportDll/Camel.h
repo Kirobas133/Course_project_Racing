@@ -4,5 +4,5 @@
 class Camel :public GroundTrpt {
 
 public:
-	Camel();
+	TRANSPORT_API Camel();
 };

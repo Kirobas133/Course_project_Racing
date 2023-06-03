@@ -3,8 +3,8 @@
 
 class GroundTrpt :public Transport {
 protected:
-	double fp, sp, op;
-	int tmp;
-	GroundTrpt(int speed, int ident, double fp, double sp, double op, int tmp);
+	double firstpause, secondpause, otherpause;
+	int timetopause;
+	GroundTrpt(int speed, int ident, double firstpause, double secondpause, double otherpause, int timetopause);
 	double RaceTime(Transport* Trnsp, double dist) override;
 };

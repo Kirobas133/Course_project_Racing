@@ -1,4 +1,5 @@
 #include<iostream>
+#include <Windows.h>
 #include "TransportDll.h"
 #include "All_Road_Shoes.h"
 #include "Air_carpet.h"
@@ -28,15 +29,20 @@ int GroundRaceList(Transport** TranspMass, double Dist, const std::string& Trans
 
 	std::cout << "Должно быть зарегистрировано хотя бы 2 транспортных средства\n1.Зарегистрировать транспорт\n Выберите действие: ";
 	std::cin >> Action;
-	while (Action != 0) {
+	std::cout << std::endl;
+	while (1) {
 		std::cout << "Гонка для наземного транспорта. Расстояние: " << Dist << std::endl;
-		std::cout << RegTS << std::endl;
+		if (TranspCounts != 0) {
+			std::cout << "Зарегистрированные транспортные средства:" << RegTS << std::endl;
+		}
 		std::cout << TransportList;
 		std::cout << "Выберите транспорт или 0 для окончания процесса регистрации: ";
 		std::cin >> Action;
+		std::cout << std::endl;
 		if (Action == 0) {
 			std::cout << "1. Зарегистрировать транспорт\n2. Начать гонку\nВыберите действие: ";
 			std::cin >> Action;
+			std::cout << std::endl;
 			if (Action == 2) {
 				return TranspCounts;
 			}
@@ -53,9 +59,11 @@ int GroundRaceList(Transport** TranspMass, double Dist, const std::string& Trans
 				}
 				TranspCounts++;
 				std::cout << "Ботинки-вездеходы успешно зарегистрированы!\n";
+				break;
 
 			case 2:
 				std::cout << WrongTS;
+				break;
 
 			case 3:
 				TranspMass[TranspCounts] = &camel;
@@ -67,6 +75,7 @@ int GroundRaceList(Transport** TranspMass, double Dist, const std::string& Trans
 				}
 				TranspCounts++;
 				std::cout << "Верблюд успешно зарегистрирован!\n";
+				break;
 
 			case 4:
 				TranspMass[TranspCounts] = &centaur;
@@ -78,9 +87,11 @@ int GroundRaceList(Transport** TranspMass, double Dist, const std::string& Trans
 				}
 				TranspCounts++;
 				std::cout << "Кентавр успешно зарегистрирован!\n";
+				break;
 
 			case 5:
 				std::cout << WrongTS;
+				break;
 
 			case 6:
 				TranspMass[TranspCounts] = &fastfuriouscamel;
@@ -92,9 +103,11 @@ int GroundRaceList(Transport** TranspMass, double Dist, const std::string& Trans
 				}
 				TranspCounts++;
 				std::cout << "Верблюд-быстроход успешно зарегистрирован!\n";
+				break;
 
 			case 7:
 				std::cout << WrongTS;
+				break;
 			}
 		}
 	}
@@ -108,15 +121,20 @@ int AirRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 
 	std::cout << "Должно быть зарегистрировано хотя бы 2 транспортных средства\n1.Зарегистрировать транспорт\n Выберите действие: ";
 	std::cin >> Action;
-	while (Action != 0) {
-		std::cout << "Гонка для наземного транспорта. Расстояние: " << Dist << std::endl;
-		std::cout << RegTS << std::endl;
+	std::cout << std::endl;
+	while (1) {
+		std::cout << "Гонка для воздушного транспорта. Расстояние: " << Dist << std::endl;
+		if (TranspCounts != 0) {
+			std::cout << "Зарегистрированные транспортные средства:" << RegTS << std::endl;
+		}
 		std::cout << TransportList;
 		std::cout << "Выберите транспорт или 0 для окончания процесса регистрации: ";
 		std::cin >> Action;
+		std::cout << std::endl;
 		if (Action == 0) {
 			std::cout << "1. Зарегистрировать транспорт\n2. Начать гонку\nВыберите действие: ";
 			std::cin >> Action;
+			std::cout << std::endl;
 			if (Action == 2) {
 				return TranspCounts;
 			}
@@ -125,6 +143,7 @@ int AirRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 			switch (Action) {
 			case 1:
 				std::cout << WrongTS;
+				break;
 
 			case 2:
 				TranspMass[TranspCounts] = &broom;
@@ -136,12 +155,15 @@ int AirRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 				}
 				TranspCounts++;
 				std::cout << "Метла успешно зарегистрирована!\n";
+				break;
 
 			case 3:
 				std::cout << WrongTS;
+				break;
 
 			case 4:
 				std::cout << WrongTS;
+				break;
 
 			case 5:
 				TranspMass[TranspCounts] = &eagle;
@@ -153,9 +175,11 @@ int AirRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 				}
 				TranspCounts++;
 				std::cout << "Орел успешно зарегистрирован!\n";
+				break;
 
 			case 6:
 				std::cout << WrongTS;
+				break;
 
 			case 7:
 				TranspMass[TranspCounts] = &aircarpet;
@@ -167,6 +191,7 @@ int AirRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 				}
 				TranspCounts++;
 				std::cout << "Ковер-самолет успешно зарегистрирован!\n";
+				break;
 			}
 		}
 	}
@@ -179,15 +204,20 @@ int AllRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 
 	std::cout << "Должно быть зарегистрировано хотя бы 2 транспортных средства\n1.Зарегистрировать транспорт\n Выберите действие: ";
 	std::cin >> Action;
-	while (Action != 0) {
-		std::cout << "Гонка для наземного транспорта. Расстояние: " << Dist << std::endl;
-		std::cout << RegTS << std::endl;
+	std::cout << std::endl;
+	while (1) {
+		std::cout << "Гонка для наземного и воздушного транспорта. Расстояние: " << Dist << std::endl;
+		if (TranspCounts != 0) {
+			std::cout << "Зарегистрированные транспортные средства:" << RegTS << std::endl;
+		}
 		std::cout << TransportList;
 		std::cout << "Выберите транспорт или 0 для окончания процесса регистрации: ";
 		std::cin >> Action;
+		std::cout << std::endl;
 		if (Action == 0) {
 			std::cout << "1. Зарегистрировать транспорт\n2. Начать гонку\nВыберите действие: ";
 			std::cin >> Action;
+			std::cout << std::endl;
 			if (Action == 2) {
 				return TranspCounts;
 			}
@@ -204,6 +234,7 @@ int AllRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 					}
 					TranspCounts++;
 					std::cout << "Ботинки-вездеходы успешно зарегистрированы!\n";
+					break;
 
 				case 2:
 					TranspMass[TranspCounts] = &broom;
@@ -215,6 +246,7 @@ int AllRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 					}
 					TranspCounts++;
 					std::cout << "Метла успешно зарегистрирована!\n";
+					break;
 
 				case 3:
 					TranspMass[TranspCounts] = &camel;
@@ -226,6 +258,7 @@ int AllRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 					}
 					TranspCounts++;
 					std::cout << "Верблюд успешно зарегистрирован!\n";
+					break;
 
 				case 4:
 					TranspMass[TranspCounts] = &centaur;
@@ -237,6 +270,7 @@ int AllRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 					}
 					TranspCounts++;
 					std::cout << "Кентавр успешно зарегистрирован!\n";
+					break;
 
 				case 5:
 					TranspMass[TranspCounts] = &eagle;
@@ -248,6 +282,7 @@ int AllRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 					}
 					TranspCounts++;
 					std::cout << "Орел успешно зарегистрирован!\n";
+					break;
 
 				case 6:
 					TranspMass[TranspCounts] = &fastfuriouscamel;
@@ -259,6 +294,7 @@ int AllRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 					}
 					TranspCounts++;
 					std::cout << "Верблюд-быстроход успешно зарегистрирован!\n";
+					break;
 
 				case 7:
 					TranspMass[TranspCounts] = &aircarpet;
@@ -270,12 +306,18 @@ int AllRaceList(Transport** TranspMass, double Dist, const std::string& Transpor
 					}
 					TranspCounts++;
 					std::cout << "Ковер-самолет успешно зарегистрирован!\n";
+					break;
 				}
 		}
 	}
 }
 
 int main() {
+
+	setlocale(LC_ALL, "Russian");
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+
 	int RaceIdent, TranspCounts, Action = 1;
 	double Dist;
 	std::string TransportList = "1. Ботинки-вездеходы\n2. Метла\n3. Верблюд\n4. Кентавр\n5. Орёл\n6. Верблюд-быстроход\n7. Ковёр-самолет\n0. Закончить регистрацию\n";
@@ -284,24 +326,31 @@ int main() {
 		Transport** TranspMass = new Transport* [7];
 		std::cout << "1.Гонка для наземного транспорта\n2.Гонка для воздушного транспорта\n3.Гонка для наземного и воздушного транспорта\nВыберите тип гонки: ";
 		std::cin >> RaceIdent;
+		std::cout << std::endl;
 		std::cout << "Укажите длинну дистанции (должна,быть положительна):\n";
 		std::cin >> Dist;
+		std::cout << std::endl;
 		if (RaceIdent == 3) {
 			TranspCounts = AllRaceList(TranspMass, Dist, TransportList);
+			std::cout << std::endl;
 		}
 		else if (RaceIdent == 2) {
 			TranspCounts = AirRaceList(TranspMass, Dist, TransportList);
+			std::cout << std::endl;
 		}
 		else {
 			TranspCounts = GroundRaceList(TranspMass, Dist, TransportList);
+			std::cout << std::endl;
 		}
 
 		double* RaceTimes = new double[TranspCounts];
 		Race race(TranspMass, TranspCounts, Dist);
 		race.RaceResult(RaceTimes);
 		race.PrintRace(RaceTimes);
+		std::cout << std::endl;
 		std::cout << "1. Провести еще одну гонку\n2. Выйти\nВыберите действие: ";
 		std::cin >> Action;
+		std::cout << std::endl;
 		delete[] TranspMass;
 		delete[] RaceTimes;
 
