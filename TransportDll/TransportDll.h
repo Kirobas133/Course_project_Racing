@@ -8,8 +8,5 @@ protected:
 	std::string name;
 	int speed;
 	int ident;
-	virtual int RaceTime(Transport* trsp, int dist);
-public:
-	Transport();
-	Transport& Race();
+	virtual double RaceTime(Transport* trsp, double dist);
 };

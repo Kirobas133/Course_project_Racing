@@ -7,8 +7,8 @@ GroundTrpt::GroundTrpt(int speed, int ident, double fp, double sp, double op, in
 	this->tmp = tmp;
 }
 
-int GroundTrpt::RaceTime(Transport* Trnsp, int dist) {
-	int time;
+double GroundTrpt::RaceTime(Transport* Trnsp, double dist) {
+	double time;
 
 	time = dist / (this->speed);
 	if (time <= tmp) {

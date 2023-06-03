@@ -3,9 +3,10 @@
 
 class Race {
 protected:
-	Transport* TranspMass;
+	Transport** TranspMass;
 	int TranspCounts, Dist;
 public:
-	Race(Transport* TranspMass, int TranspCounst, int Dist);
-	Transport* RaceResult(Race RaceList);
+	Race(Transport** TranspMass, int TranspCounst, int Dist);
+	void RaceResult(double* RaceTimes);
+	void PrintRace(double* RaceTimes);
 };

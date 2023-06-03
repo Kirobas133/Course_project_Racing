@@ -5,5 +5,5 @@ class Air_carpet :public AirTrpt {
 public:
 	Air_carpet();
 protected:
-	int RaceTime(Transport* Trnsp, int dist) override;
+	double RaceTime(Transport* Trnsp, double dist) override;
 };

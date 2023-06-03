@@ -4,8 +4,8 @@ Air_carpet::Air_carpet() :AirTrpt(10, 5) {
 	name = "Air carpet";
 }
 
-int Air_carpet::RaceTime(Transport* Trnsp, int dist) {
-	int time;
+double Air_carpet::RaceTime(Transport* Trnsp, double dist) {
+	double time;
 	if (dist < 1000) {
 		time = dist / speed;
 		return time;

@@ -5,7 +5,7 @@ class Broom :public AirTrpt {
 public:
 	Broom();
 protected:
-	int RaceTime(Transport* Trnsp, int dist) override;
+	double RaceTime(Transport* Trnsp, double dist) override;
 };
 
 

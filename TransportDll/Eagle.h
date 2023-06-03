@@ -5,5 +5,5 @@ class Eagle :public AirTrpt {
 public:
 	Eagle();
 protected:
-	int RaceTime(Transport* Trnsp, int dist) override;
+	double RaceTime(Transport* Trnsp, double dist) override;
 };
