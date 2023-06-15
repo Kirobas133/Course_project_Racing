@@ -1,13 +1,19 @@
 #include "GroundTransport.h"
 
-GroundTrpt::GroundTrpt(int speed, int ident, double firstpause, double secondpause, double otherpause, int timetopause) :Transport(speed, ident) {
-	this->firstpause = firstpause;
-	this->secondpause = secondpause;
-	this->otherpause = otherpause;
-	this->timetopause = timetopause;
+GroundTrpt::GroundTrpt(int speed, int ident, double firstpause, double secondpause,
+	double otherpause, int timetopause) :Transport(speed, ident),
+	firstpause(firstpause),
+	secondpause(secondpause),
+	otherpause(otherpause),
+	timetopause(timetopause)
+{
+	//this->firstpause = firstpause;
+	//this->secondpause = secondpause;
+	//this->otherpause = otherpause;
+	//this->timetopause = timetopause;
 }
 
-double GroundTrpt::RaceTime(Transport* Trnsp, double dist) {
+double GroundTrpt::RaceTime(Transport* Trnsp, int dist) {
 	double time;
 
 	time = dist / (this->speed);

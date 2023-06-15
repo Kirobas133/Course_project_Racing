@@ -15,5 +15,5 @@ protected:
 	std::string name;
 	int speed;
 	int ident;
-	virtual double RaceTime(Transport* trsp, double dist);
+	virtual double RaceTime(Transport* trsp, int dist) = 0;
 };

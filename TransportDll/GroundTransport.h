@@ -6,5 +6,5 @@ protected:
 	double firstpause, secondpause, otherpause;
 	int timetopause;
 	GroundTrpt(int speed, int ident, double firstpause, double secondpause, double otherpause, int timetopause);
-	double RaceTime(Transport* Trnsp, double dist) override;
+	double RaceTime(Transport* Trnsp, int dist) final override;
 };

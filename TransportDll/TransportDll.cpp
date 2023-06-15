@@ -1,12 +1,7 @@
 ﻿#include"TransportDll.h"
 
-Transport::Transport(int speed, int ident) {
-	this->speed = speed;
-	this->ident = ident;
-}
+Transport::Transport(int speed, int ident) : speed(speed), ident(ident) {}
 
-double Transport::RaceTime(Transport* trsp, double dist) {
-	return 0;
-};
-
-//Transport::Transport(){}
+//double Transport::RaceTime(Transport* trsp, int dist) {
+//	return 0;
+//};

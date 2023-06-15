@@ -5,9 +5,9 @@ class Race {
 protected:
 	Transport** TranspMass;
 	int TranspCounts;
-	double Dist;
+	int Dist;
 public:
-	TRANSPORT_API Race(Transport** TranspMass, int TranspCounst, double Dist);
+	TRANSPORT_API Race(Transport** TranspMass, int TranspCounst, int Dist);
 	TRANSPORT_API void RaceResult(double* RaceTimes);
-	TRANSPORT_API void PrintRace(double* RaceTimes);
+	TRANSPORT_API void PrintRace(const double* RaceTimes);
 };

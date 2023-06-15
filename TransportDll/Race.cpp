@@ -1,7 +1,7 @@
 #include <iostream>
 #include"Race.h"
 
-Race::Race(Transport** TranspMass, int TranspCounts, double Dist) {
+Race::Race(Transport** TranspMass, int TranspCounts, int Dist) {
 	this->TranspMass = TranspMass;
 	this->TranspCounts = TranspCounts;
 	this->Dist = Dist;
@@ -24,7 +24,7 @@ void Race::RaceResult(double* RaceTimes) {
 	}
 }
 
-void Race::PrintRace(double* RaceTimes) {
+void Race::PrintRace(const double* RaceTimes) {
 		std::cout << "Результаты гонки:\n";
 
 		for (int i = 0; i < TranspCounts; i++) {
